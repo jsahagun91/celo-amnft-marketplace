@@ -1,7 +1,68 @@
 import Link from "next/link";
 import styles from "../styles/Footer.module.css";
+import { useEffect } from "react";
+
 
 export default function Footer() {
+
+    var eth;
+        var isTestnet = 'true';
+        var SiteNetID = '44787';
+        var SiteNetChainID = '0xAEF3';
+        var SiteNetName = 'Celo Alfajores Testnet';
+        var SiteErc20 = 'ERC20';
+        var SiteErc721 = 'ERC721';
+        var SiteErc1155 = 'ERC1155';
+        var sv = '22.9.4.0';
+        var slt = 'svg';
+        var allowErc1155 = 'True';
+        
+        async function addNetwork(type) {
+            
+            if (type === 'web3') {
+                if (typeof ethereum !== 'undefined') {
+                    eth = new Web3Eth(ethereum);
+                } else if (typeof web3 !== 'undefined') {
+                    eth = new Web3Eth(web3.givenProvider);
+                } else {
+                    eth = new Web3Eth(ethereum);
+                }                
+            }            
+
+            if (typeof eth !== 'undefined') {
+                var network = 0;
+                network = await eth.getChainId();
+                netID = network.toString();
+                var params;
+                if (netID == SiteNetID) {
+                    alert("Celo Alfajores Network has already been added to Metamask.");
+                    return;
+                } else {
+                    params = [{
+                        chainId: SiteNetChainID,
+                        chainName: 'Celo Alfajores Testnet',
+                        nativeCurrency: {
+                            name: 'CELO',
+                            symbol: 'CELO',
+                            decimals: 18
+                        },
+                        rpcUrls: ['https://alfajores-forno.celo-testnet.org'],
+                        blockExplorerUrls: ['https://alfajores.celoscan.io']
+                    }]
+                }
+            
+                window.ethereum.request({ method: 'wallet_addEthereumChain', params })
+                    .then(() => console.log('Success'))
+                    .catch((error) => console.log("Error", error.message));
+            } else {
+                alert('Unable to locate a compatible web3 browser!');
+            }
+        }
+    
+    useEffect(() => {
+          addNetwork();
+      }, []);
+
     return (
         <div className={styles.footer}>
             {/* <Link href="/"> GitHub </Link> */}
@@ -18,3 +79,4 @@ export default function Footer() {
         </div>
     );
 }
+

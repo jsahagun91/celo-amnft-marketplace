@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import styles from "../styles/Onboarding.module.css"
 
 export default function Onboard() {
@@ -23,4 +24,5 @@ return (
     </>
     );
 
+    <Footer/>
 }

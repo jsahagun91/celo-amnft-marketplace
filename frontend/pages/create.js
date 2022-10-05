@@ -7,6 +7,7 @@ import MarketplaceABI from "../abis/NFTMarketplace.json";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Create.module.css";
 import { MARKETPLACE_ADDRESS } from "../constants";
+import Footer from "../components/Footer";
 
 export default function Create() {
     // State variables to contain information about the NFT being sold
@@ -141,6 +142,8 @@ export default function Create() {
                 </Link>
             )}
         </div>
+        <Footer/>
         </>
+        
     );
 }
