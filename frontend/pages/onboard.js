@@ -9,37 +9,16 @@ return (
     {/* Show the navigation bar */}
     <Navbar />
 
-    <div className={styles.onboard}>
-        <div className={styles.card}>
-        <a href="https://www.metamask.io/">
-        <img src='https://assets.bigcartel.com/theme_images/39541006/FullSizeRender.jpg' className="rotate" width="25%" /> </a>
-        <div className={styles.container}>
-                    <center>
-                  <span>
-                    <b>
-                    1️⃣ Download Metamask
-                    </b>
-                  </span>
-                  <span> HERE </span>
-                  <span> BOOM </span>
-                  </center>
-                </div>
-        </div>
-        <div className={styles.card}>
-        <a href="https://www.metamask.io/">
-        <img src='https://assets.bigcartel.com/theme_images/39541006/FullSizeRender.jpg' className="rotate" width="25%" /> </a>
-        <div className={styles.container}>
-                    <center>
-                  <span>
-                    <b>
-                     2️⃣ Buy Ether
-                    </b>
-                  </span>
-                  <span> HERE </span>
-                  <span> BOOM </span>
-                  </center>
-                </div>
-        </div>
+    <div className={styles.container}>
+        <div class="card">
+  <h5 class="card-header">Onboard to Web3</h5>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
     </div>
     </>
     );

@@ -10,6 +10,7 @@ export default function Navbar() {
             <Link href="/onboard"> Onboard to Web3</Link>
 
             <ConnectButton/>
+            
         </div>
     );
 }

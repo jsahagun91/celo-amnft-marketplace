@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Listing from "../components/Listing";
 import { createClient } from "urql";
 import styles from "../styles/Home.module.css";
@@ -95,6 +96,8 @@ export default function Home() {
       {!loading && listings && listings.length === 0 && (
         <span>No listings found</span>
       )}
+
+      <Footer/>
     </>
   );
 }
