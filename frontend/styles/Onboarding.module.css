@@ -30,7 +30,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding: 5rem;
+    padding: 3rem;
     margin: auto;
     margin-top: auto;
     border-radius: 1rem;
@@ -38,4 +38,9 @@
     background-color: aliceblue;
     width: 50%;
     margin-top: 5%;
+}
+
+.css-seed {
+    background-color: red;
+    font-weight: bold;
 }

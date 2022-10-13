@@ -67,7 +67,7 @@ export default function Home() {
       <center>  
       <img src='https://assets.bigcartel.com/theme_images/39541006/FullSizeRender.jpg' className="rotate" width="150" height="100" />
       </center>
-      <center> Asu Madre NFT Marketplace </center>
+      <center> Asu Madre Latin Music NFT Marketplace </center>
 
       {/* Render the listings */}
       <div className={styles.container}>

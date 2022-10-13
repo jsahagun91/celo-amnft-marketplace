@@ -4,6 +4,7 @@ import '../styles/globals.css';
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
+import { Web3Provider } from "@ethersproject/providers";
 
 const celoChain = {
   id: 44787,

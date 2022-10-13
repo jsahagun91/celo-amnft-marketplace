@@ -16,7 +16,7 @@ export default function Footer() {
         var sv = '22.9.4.0';
         var slt = 'svg';
         var allowErc1155 = 'True';
-        
+
         async function addNetwork(type) {
             
             if (type === 'web3') {
